@@ -9,7 +9,7 @@ const Science = () => {
       studies: 15,
       participants: 2400,
       icon: Microscope,
-      color: 'emerald'
+      color: 'purple'
     },
     {
       title: 'Perimenopause Studies',
@@ -103,7 +103,7 @@ const Science = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-emerald-50 via-white to-purple-50 py-20">
+      <section className="bg-gradient-to-br from-purple-50 via-white to-purple-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Science & Innovation
@@ -113,7 +113,7 @@ const Science = () => {
             Every product is backed by rigorous clinical studies and laboratory testing.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-emerald-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors">
+            <button className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
               View Research Papers
             </button>
             <button className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors">
@@ -145,7 +145,7 @@ const Science = () => {
                 <p className="text-gray-600 mb-6">{area.description}</p>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-emerald-600">{area.studies}</div>
+                    <div className="text-2xl font-bold text-purple-600">{area.studies}</div>
                     <div className="text-sm text-gray-600">Studies</div>
                   </div>
                   <div className="text-center">
@@ -180,7 +180,7 @@ const Science = () => {
                       <h3 className="text-xl font-semibold text-gray-900 mr-4">{study.title}</h3>
                       <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                         study.status === 'Published' 
-                          ? 'bg-emerald-100 text-emerald-700' 
+                          ? 'bg-purple-100 text-purple-700' 
                           : 'bg-yellow-100 text-yellow-700'
                       }`}>
                         {study.status}
@@ -200,13 +200,13 @@ const Science = () => {
                       </div>
                       <div>
                         <span className="text-sm text-gray-500">Key Finding</span>
-                        <div className="font-semibold text-emerald-600">{study.keyFinding}</div>
+                        <div className="font-semibold text-purple-600">{study.keyFinding}</div>
                       </div>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4 mt-4 lg:mt-0">
                     {study.downloadUrl && (
-                      <button className="flex items-center text-emerald-600 hover:text-emerald-700 font-medium">
+                      <button className="flex items-center text-purple-600 hover:text-purple-700 font-medium">
                         <Download className="w-5 h-5 mr-2" />
                         Download PDF
                       </button>
@@ -224,7 +224,7 @@ const Science = () => {
       </section>
 
       {/* Lab Process */}
-      <section className="py-20 bg-gradient-to-br from-emerald-50 to-purple-50">
+      <section className="py-20 bg-gradient-to-br from-purple-50 to-purple-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -238,7 +238,7 @@ const Science = () => {
           <div className="space-y-8">
             {labProcess.map((process, index) => (
               <div key={index} className="flex items-start">
-                <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-emerald-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-8">
+                <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-8">
                   {process.step}
                 </div>
                 <div className="flex-1 bg-white rounded-2xl p-6 shadow-sm">
@@ -291,7 +291,7 @@ const Science = () => {
                   className="w-32 h-32 rounded-full object-cover mx-auto mb-4"
                 />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
-                <p className="text-emerald-600 font-medium mb-1">{member.role}</p>
+                <p className="text-purple-600 font-medium mb-1">{member.role}</p>
                 <p className="text-gray-600 text-sm">{member.credentials}</p>
               </div>
             ))}
@@ -300,20 +300,20 @@ const Science = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-emerald-600 to-purple-600">
+      <section className="py-20 bg-gradient-to-r from-purple-600 to-purple-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
             Partner with Our Research
           </h2>
-          <p className="text-xl text-emerald-100 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
             Interested in collaborating on women's health research? 
             We welcome partnerships with academic institutions and healthcare providers.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-emerald-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Research Partnerships
             </button>
-            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors">
+            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
               Clinical Trial Participation
             </button>
           </div>

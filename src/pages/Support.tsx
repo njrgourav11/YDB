@@ -83,7 +83,7 @@ const Support = () => {
       description: 'Get instant help from our wellness experts',
       availability: 'Available 9 AM - 9 PM IST',
       action: 'Start Chat',
-      color: 'emerald'
+      color: 'purple'
     },
     {
       icon: Phone,
@@ -104,17 +104,17 @@ const Support = () => {
   ];
 
   const orderStatuses = [
-    { status: 'Order Confirmed', icon: CheckCircle, color: 'emerald', completed: true },
+    { status: 'Order Confirmed', icon: CheckCircle, color: 'purple', completed: true },
     { status: 'Processing', icon: Clock, color: 'yellow', completed: true },
     { status: 'Shipped', icon: Truck, color: 'blue', completed: true },
     { status: 'Out for Delivery', icon: Truck, color: 'purple', completed: false },
-    { status: 'Delivered', icon: CheckCircle, color: 'emerald', completed: false }
+    { status: 'Delivered', icon: CheckCircle, color: 'purple', completed: false }
   ];
 
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-emerald-50 via-white to-purple-50 py-16">
+      <section className="bg-gradient-to-br from-purple-50 via-white to-purple-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             How Can We Help You?
@@ -130,7 +130,7 @@ const Support = () => {
             <input
               type="text"
               placeholder="Search for help articles, order tracking, returns..."
-              className="w-full pl-12 pr-4 py-4 text-lg border border-gray-300 rounded-2xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 shadow-sm"
+              className="w-full pl-12 pr-4 py-4 text-lg border border-gray-300 rounded-2xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 shadow-sm"
             />
           </div>
         </div>
@@ -151,7 +151,7 @@ const Support = () => {
                 onClick={() => setActiveTab(tab.id)}
                 className={`py-4 px-1 border-b-2 font-medium text-sm transition-colors flex items-center ${
                   activeTab === tab.id
-                    ? 'border-emerald-600 text-emerald-600'
+                    ? 'border-purple-600 text-purple-600'
                     : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                 }`}
               >
@@ -173,7 +173,7 @@ const Support = () => {
             <div className="space-y-8">
               {faqs.map((category, categoryIndex) => (
                 <div key={categoryIndex} className="bg-white rounded-2xl shadow-sm overflow-hidden">
-                  <div className="bg-gradient-to-r from-emerald-50 to-purple-50 px-6 py-4">
+                  <div className="bg-gradient-to-r from-purple-50 to-purple-50 px-6 py-4">
                     <h3 className="text-xl font-semibold text-gray-900">{category.category}</h3>
                   </div>
                   <div className="divide-y divide-gray-200">
@@ -205,9 +205,9 @@ const Support = () => {
                     value={trackingId}
                     onChange={(e) => setTrackingId(e.target.value)}
                     placeholder="Enter Order ID (e.g., YDB123456)"
-                    className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                    className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                   />
-                  <button className="bg-emerald-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors">
+                  <button className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
                     Track Order
                   </button>
                 </div>
@@ -223,7 +223,7 @@ const Support = () => {
                     <p className="text-gray-600">Placed on March 10, 2024</p>
                   </div>
                   <div className="text-right">
-                    <div className="text-lg font-semibold text-emerald-600">Shipped</div>
+                    <div className="text-lg font-semibold text-purple-600">Shipped</div>
                     <div className="text-sm text-gray-600">Expected delivery: March 15</div>
                   </div>
                 </div>
@@ -273,25 +273,25 @@ const Support = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
               <div className="bg-white rounded-2xl shadow-sm p-8">
-                <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-6">
-                  <RefreshCw className="w-8 h-8 text-emerald-600" />
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                  <RefreshCw className="w-8 h-8 text-purple-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Return Policy</h3>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-emerald-600 mr-3 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-0.5 flex-shrink-0" />
                     30-day money-back guarantee
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-emerald-600 mr-3 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-0.5 flex-shrink-0" />
                     No questions asked returns
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-emerald-600 mr-3 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-0.5 flex-shrink-0" />
                     Free return shipping
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-emerald-600 mr-3 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-0.5 flex-shrink-0" />
                     Refund processed in 5-7 days
                   </li>
                 </ul>
@@ -324,7 +324,7 @@ const Support = () => {
             </div>
 
             <div className="text-center">
-              <button className="bg-emerald-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors">
+              <button className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
                 Start Return Request
               </button>
             </div>
@@ -364,14 +364,14 @@ const Support = () => {
                       <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
                       <input
                         type="text"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                       />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
                       <input
                         type="text"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                       />
                     </div>
                   </div>
@@ -379,12 +379,12 @@ const Support = () => {
                     <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
                     <input
                       type="email"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Subject</label>
-                    <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500">
+                    <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
                       <option>General Inquiry</option>
                       <option>Product Question</option>
                       <option>Order Issue</option>
@@ -396,13 +396,13 @@ const Support = () => {
                     <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
                     <textarea
                       rows={5}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                       placeholder="Tell us how we can help you..."
                     ></textarea>
                   </div>
                   <button
                     type="submit"
-                    className="w-full bg-emerald-600 text-white py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
+                    className="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
                   >
                     Send Message
                   </button>

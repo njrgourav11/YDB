@@ -69,7 +69,7 @@ const Footer = () => {
             
             {/* Social Links */}
             <div className="flex space-x-4 mt-6">
-              <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">
+              <a href="https://www.instagram.com/deservebetter.in" className="text-gray-400 hover:text-purple-400 transition-colors">
                 <Instagram className="w-6 h-6" />
               </a>
               <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">

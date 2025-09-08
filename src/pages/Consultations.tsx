@@ -112,7 +112,7 @@ const Consultations = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-emerald-50 via-white to-purple-50 py-16">
+      <section className="bg-gradient-to-br from-purple-50 via-white to-purple-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Expert Consultations & Programs
@@ -123,7 +123,7 @@ const Consultations = () => {
           </p>
           <div className="flex items-center justify-center space-x-8 text-sm text-gray-600">
             <div className="flex items-center">
-              <Video className="w-5 h-5 text-emerald-600 mr-2" />
+              <Video className="w-5 h-5 text-purple-600 mr-2" />
               <span>Video Consultations</span>
             </div>
             <div className="flex items-center">
@@ -162,7 +162,7 @@ const Consultations = () => {
                     />
                     <div>
                       <h3 className="text-xl font-semibold text-gray-900">{expert.name}</h3>
-                      <p className="text-emerald-600 font-medium">{expert.specialization}</p>
+                      <p className="text-purple-600 font-medium">{expert.specialization}</p>
                     </div>
                   </div>
 
@@ -185,7 +185,7 @@ const Consultations = () => {
                     <h4 className="font-semibold text-gray-900 mb-2">Expertise</h4>
                     <div className="flex flex-wrap gap-2">
                       {expert.expertise.slice(0, 2).map((skill, index) => (
-                        <span key={index} className="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-sm">
+                        <span key={index} className="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-sm">
                           {skill}
                         </span>
                       ))}
@@ -200,14 +200,14 @@ const Consultations = () => {
                       <span className="text-2xl font-bold text-gray-900">₹{expert.consultationFee}</span>
                       <span className="text-gray-600 text-sm ml-1">/session</span>
                     </div>
-                    <span className="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">
                       {expert.availability}
                     </span>
                   </div>
 
                   <button 
                     onClick={() => setSelectedExpert(expert)}
-                    className="w-full bg-emerald-600 text-white py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
+                    className="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
                   >
                     Book Consultation
                   </button>
@@ -236,7 +236,7 @@ const Consultations = () => {
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{program.name}</h3>
                     <p className="text-gray-600 mb-4">{program.description}</p>
                     <div className="flex items-center justify-center">
-                      <span className="text-3xl font-bold text-emerald-600">₹{program.price.toLocaleString()}</span>
+                      <span className="text-3xl font-bold text-purple-600">₹{program.price.toLocaleString()}</span>
                       <span className="text-lg text-gray-500 line-through ml-2">₹{program.originalPrice.toLocaleString()}</span>
                     </div>
                     <p className="text-sm text-gray-600 mt-1">{program.duration} program</p>
@@ -247,7 +247,7 @@ const Consultations = () => {
                     <ul className="space-y-2">
                       {program.features.map((feature, index) => (
                         <li key={index} className="flex items-center text-sm text-gray-700">
-                          <CheckCircle className="w-4 h-4 text-emerald-600 mr-3 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-purple-600 mr-3 flex-shrink-0" />
                           {feature}
                         </li>
                       ))}
@@ -269,7 +269,7 @@ const Consultations = () => {
         </section>
 
         {/* How It Works */}
-        <section className="bg-gradient-to-br from-emerald-50 to-purple-50 rounded-3xl p-8 lg:p-12">
+        <section className="bg-gradient-to-br from-purple-50 to-purple-50 rounded-3xl p-8 lg:p-12">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               How Our Consultations Work
@@ -307,7 +307,7 @@ const Consultations = () => {
               }
             ].map((step) => (
               <div key={step.step} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <step.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -348,7 +348,7 @@ const Consultations = () => {
                     type="date"
                     value={selectedDate}
                     onChange={(e) => setSelectedDate(e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                   />
                 </div>
                 
@@ -359,7 +359,7 @@ const Consultations = () => {
                   <select
                     value={selectedTime}
                     onChange={(e) => setSelectedTime(e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                   >
                     <option value="">Choose time</option>
                     {availableTimes.map((time) => (
@@ -369,7 +369,7 @@ const Consultations = () => {
                 </div>
               </div>
 
-              <div className="mt-6 p-4 bg-emerald-50 rounded-lg">
+              <div className="mt-6 p-4 bg-purple-50 rounded-lg">
                 <h4 className="font-semibold text-gray-900 mb-2">Consultation Details</h4>
                 <div className="space-y-2 text-sm text-gray-700">
                   <div className="flex justify-between">
@@ -390,13 +390,13 @@ const Consultations = () => {
               <div className="mt-6 flex space-x-4">
                 <button 
                   onClick={() => setSelectedExpert(null)}
-                  className="flex-1 border-2 border-gray-300 text-gray-700 py-3 rounded-lg font-semibold hover:border-emerald-600 hover:text-emerald-600 transition-colors"
+                  className="flex-1 border-2 border-gray-300 text-gray-700 py-3 rounded-lg font-semibold hover:border-purple-600 hover:text-purple-600 transition-colors"
                 >
                   Cancel
                 </button>
                 <button 
                   disabled={!selectedDate || !selectedTime}
-                  className="flex-1 bg-emerald-600 text-white py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed"
+                  className="flex-1 bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed"
                 >
                   Confirm Booking
                 </button>

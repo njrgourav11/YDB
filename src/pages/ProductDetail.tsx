@@ -122,7 +122,7 @@ const ProductDetail = () => {
                   key={index}
                   className={`px-3 py-1 rounded-full text-sm font-medium ${
                     badge === 'Best Seller'
-                      ? 'bg-emerald-100 text-emerald-700'
+                      ? 'bg-purple-100 text-purple-700'
                       : badge === 'Lab Tested'
                       ? 'bg-blue-100 text-blue-700'
                       : 'bg-purple-100 text-purple-700'
@@ -167,7 +167,7 @@ const ProductDetail = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {product.keyBenefits.map((benefit, index) => (
                   <div key={index} className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-emerald-600 mr-2 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-purple-600 mr-2 flex-shrink-0" />
                     <span className="text-gray-700">{benefit}</span>
                   </div>
                 ))}
@@ -183,8 +183,8 @@ const ProductDetail = () => {
                     key={option.id}
                     className={`flex items-center justify-between p-4 border-2 rounded-lg cursor-pointer transition-colors ${
                       subscriptionType === option.id
-                        ? 'border-emerald-600 bg-emerald-50'
-                        : 'border-gray-200 hover:border-emerald-300'
+                        ? 'border-purple-600 bg-purple-50'
+                        : 'border-gray-200 hover:border-purple-300'
                     }`}
                   >
                     <div className="flex items-center">
@@ -199,7 +199,7 @@ const ProductDetail = () => {
                       <div>
                         <div className="font-medium text-gray-900">{option.label}</div>
                         {option.savings > 0 && (
-                          <div className="text-sm text-emerald-600">Save {option.savings}%</div>
+                          <div className="text-sm text-purple-600">Save {option.savings}%</div>
                         )}
                       </div>
                     </div>
@@ -225,7 +225,7 @@ const ProductDetail = () => {
                 <select
                   value={quantity}
                   onChange={(e) => setQuantity(Number(e.target.value))}
-                  className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                  className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                 >
                   {[1, 2, 3, 4, 5].map(num => (
                     <option key={num} value={num}>{num}</option>
@@ -234,11 +234,11 @@ const ProductDetail = () => {
               </div>
 
               <div className="flex space-x-4">
-                <button className="flex-1 bg-emerald-600 text-white py-4 px-6 rounded-lg font-semibold hover:bg-emerald-700 transition-colors flex items-center justify-center">
+                <button className="flex-1 bg-purple-600 text-white py-4 px-6 rounded-lg font-semibold hover:bg-purple-700 transition-colors flex items-center justify-center">
                   <ShoppingCart className="w-5 h-5 mr-2" />
                   Add to Cart - ₹{(selectedOption!.price * quantity).toLocaleString()}
                 </button>
-                <button className="p-4 border-2 border-gray-300 rounded-lg hover:border-emerald-600 hover:text-emerald-600 transition-colors">
+                <button className="p-4 border-2 border-gray-300 rounded-lg hover:border-purple-600 hover:text-purple-600 transition-colors">
                   <Heart className="w-6 h-6" />
                 </button>
               </div>
@@ -253,19 +253,19 @@ const ProductDetail = () => {
             {/* Trust Badges */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 pt-6 border-t">
               <div className="flex items-center text-sm text-gray-600">
-                <Shield className="w-5 h-5 text-emerald-600 mr-2" />
+                <Shield className="w-5 h-5 text-purple-600 mr-2" />
                 Lab Tested
               </div>
               <div className="flex items-center text-sm text-gray-600">
-                <Award className="w-5 h-5 text-emerald-600 mr-2" />
+                <Award className="w-5 h-5 text-purple-600 mr-2" />
                 Certified
               </div>
               <div className="flex items-center text-sm text-gray-600">
-                <Truck className="w-5 h-5 text-emerald-600 mr-2" />
+                <Truck className="w-5 h-5 text-purple-600 mr-2" />
                 Free Shipping
               </div>
               <div className="flex items-center text-sm text-gray-600">
-                <RefreshCw className="w-5 h-5 text-emerald-600 mr-2" />
+                <RefreshCw className="w-5 h-5 text-purple-600 mr-2" />
                 30-Day Return
               </div>
             </div>
@@ -287,7 +287,7 @@ const ProductDetail = () => {
                 onClick={() => setSelectedTab(tab.id)}
                 className={`py-4 px-1 border-b-2 font-medium text-sm transition-colors ${
                   selectedTab === tab.id
-                    ? 'border-emerald-600 text-emerald-600'
+                    ? 'border-purple-600 text-purple-600'
                     : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                 }`}
               >
@@ -338,7 +338,7 @@ const ProductDetail = () => {
                   <div key={index} className="bg-gray-50 rounded-2xl p-6">
                     <div className="flex justify-between items-start mb-4">
                       <h4 className="text-xl font-semibold text-gray-900">{ingredient.name}</h4>
-                      <span className="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm font-medium">
+                      <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">
                         {ingredient.amount}
                       </span>
                     </div>
@@ -348,7 +348,7 @@ const ProductDetail = () => {
                         <p className="text-gray-700">{ingredient.ayurveda}</p>
                       </div>
                       <div>
-                        <h5 className="font-medium text-emerald-700 mb-2">Clinical Evidence</h5>
+                        <h5 className="font-medium text-purple-700 mb-2">Clinical Evidence</h5>
                         <p className="text-gray-700">{ingredient.clinical}</p>
                       </div>
                     </div>
@@ -364,7 +364,7 @@ const ProductDetail = () => {
               <div className="space-y-6">
                 {product.timeline.map((phase, index) => (
                   <div key={index} className="flex items-start">
-                    <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-emerald-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-6">
+                    <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-6">
                       Week {phase.week}
                     </div>
                     <div className="flex-1">
@@ -407,12 +407,12 @@ const ProductDetail = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="bg-emerald-50 rounded-2xl p-6">
+                <div className="bg-purple-50 rounded-2xl p-6">
                   <h4 className="text-lg font-semibold text-gray-900 mb-4">Lab Reports</h4>
                   <p className="text-gray-700 mb-4">
                     All our products undergo rigorous third-party testing for purity, potency, and safety.
                   </p>
-                  <button className="flex items-center text-emerald-600 font-medium hover:text-emerald-700">
+                  <button className="flex items-center text-purple-600 font-medium hover:text-purple-700">
                     <Download className="w-5 h-5 mr-2" />
                     Download Lab Certificate
                   </button>
@@ -444,7 +444,7 @@ const ProductDetail = () => {
                         </div>
                       </div>
                       {review.verified && (
-                        <span className="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm font-medium">
+                        <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">
                           Verified Purchase
                         </span>
                       )}
