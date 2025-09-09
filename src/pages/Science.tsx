@@ -29,6 +29,17 @@ const Science = () => {
     }
   ];
 
+  const colorMap = {
+    purple: {
+      bg: 'bg-purple-100',
+      text: 'text-purple-600'
+    },
+    blue: {
+      bg: 'bg-blue-100',
+      text: 'text-blue-600'
+    }
+  }
+
   const clinicalStudies = [
     {
       title: 'Spearmint Extract in PCOS Management',
@@ -58,7 +69,7 @@ const Science = () => {
       duration: '8 weeks',
       keyFinding: 'Significant improvement in insulin sensitivity',
       status: 'In Review',
-      downloadUrl: null
+      downloadUrl: '#'
     },
     {
       title: 'Ashwagandha in Perimenopause Symptoms',
@@ -138,8 +149,8 @@ const Science = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {researchAreas.map((area, index) => (
               <div key={index} className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-                <div className={`w-16 h-16 bg-${area.color}-100 rounded-full flex items-center justify-center mb-6`}>
-                  <area.icon className={`w-8 h-8 text-${area.color}-600`} />
+                <div className={`w-16 h-16 ${colorMap[area.color].bg} rounded-full flex items-center justify-center mb-6`}>
+                  <area.icon className={`w-8 h-8 ${colorMap[area.color].text}`} />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">{area.title}</h3>
                 <p className="text-gray-600 mb-6">{area.description}</p>
@@ -178,7 +189,7 @@ const Science = () => {
                   <div className="flex-1">
                     <div className="flex items-center mb-2">
                       <h3 className="text-xl font-semibold text-gray-900 mr-4">{study.title}</h3>
-                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${ 
                         study.status === 'Published' 
                           ? 'bg-purple-100 text-purple-700' 
                           : 'bg-yellow-100 text-yellow-700'
@@ -264,24 +275,24 @@ const Science = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
+            {[ 
               {
                 name: 'Dr. Priya Sharma',
                 role: 'Chief Scientific Officer',
                 credentials: 'PhD in Reproductive Endocrinology',
-                image: 'https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop'
+                image: ''
               },
               {
                 name: 'Dr. Anjali Patel',
                 role: 'Head of Ayurvedic Research',
                 credentials: 'BAMS, MD in Ayurveda',
-                image: 'https://images.pexels.com/photos/5327921/pexels-photo-5327921.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop'
+                image: ''
               },
               {
                 name: 'Dr. Meera Reddy',
                 role: 'Clinical Research Director',
                 credentials: 'MD, Clinical Research Specialist',
-                image: 'https://images.pexels.com/photos/5327656/pexels-photo-5327656.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop'
+                image: ''
               }
             ].map((member, index) => (
               <div key={index} className="text-center">

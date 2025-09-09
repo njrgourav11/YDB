@@ -65,7 +65,7 @@ const Shop = () => {
       originalPrice: 2699,
       rating: 4.6,
       reviews: 89,
-      image: 'https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
+      image: 'Energy&VitalityBoost.jpeg',
       badges: ['Organic'],
       ingredients: ['Rhodiola', 'Ginseng', 'B-Complex', 'Iron'],
       benefits: ['Increases energy', 'Reduces fatigue', 'Improves focus']
@@ -79,7 +79,7 @@ const Shop = () => {
       originalPrice: 2599,
       rating: 4.8,
       reviews: 267,
-      image: 'https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
+      image: 'sleep.jpg',
       badges: ['Bestseller'],
       ingredients: ['Melatonin', 'Chamomile', 'Magnesium', 'L-Theanine'],
       benefits: ['Better sleep', 'Stress relief', 'Relaxation']
