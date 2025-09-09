@@ -280,19 +280,19 @@ const Science = () => {
                 name: 'Dr. Priya Sharma',
                 role: 'Chief Scientific Officer',
                 credentials: 'PhD in Reproductive Endocrinology',
-                image: ''
+                image: 'review1.webp'
               },
               {
                 name: 'Dr. Anjali Patel',
                 role: 'Head of Ayurvedic Research',
                 credentials: 'BAMS, MD in Ayurveda',
-                image: ''
+                image: 'review2.jpg'
               },
               {
                 name: 'Dr. Meera Reddy',
                 role: 'Clinical Research Director',
                 credentials: 'MD, Clinical Research Specialist',
-                image: ''
+                image: 'review3.jpg'
               }
             ].map((member, index) => (
               <div key={index} className="text-center">
