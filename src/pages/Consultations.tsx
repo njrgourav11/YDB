@@ -17,7 +17,7 @@ const Consultations = () => {
       reviews: 324,
       languages: ['English', 'Hindi'],
       consultationFee: 1500,
-      image: 'https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop',
+      image: 'review1.webp',
       availability: 'Available today',
       expertise: ['PCOS Management', 'Fertility Planning', 'Hormonal Imbalance', 'Lifestyle Counseling']
     },
@@ -31,7 +31,7 @@ const Consultations = () => {
       reviews: 198,
       languages: ['English', 'Hindi', 'Gujarati'],
       consultationFee: 1200,
-      image: 'https://images.pexels.com/photos/5327921/pexels-photo-5327921.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop',
+      image: 'review2.jpg',
       availability: 'Available tomorrow',
       expertise: ['Perimenopause Support', 'Ayurvedic Medicine', 'Stress Management', 'Natural Remedies']
     },
@@ -45,7 +45,7 @@ const Consultations = () => {
       reviews: 267,
       languages: ['English', 'Telugu', 'Tamil'],
       consultationFee: 1300,
-      image: 'https://images.pexels.com/photos/5327656/pexels-photo-5327656.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop',
+      image: 'review3.jpg',
       availability: 'Available today',
       expertise: ['Nutritional Counseling', 'Weight Management', 'Metabolic Health', 'Supplement Guidance']
     }

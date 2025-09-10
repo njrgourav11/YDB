@@ -30,28 +30,28 @@ const About = () => {
       name: 'Priya Sharma',
       role: 'Founder & CEO',
       background: 'Former McKinsey consultant with personal PCOS journey',
-      image: 'https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop',
+      image: 'review1.webp',
       story: 'After struggling with PCOS for years and finding limited solutions, Priya founded YDB to create the support system she wished she had.'
     },
     {
       name: 'Dr. Anjali Patel',
       role: 'Chief Medical Officer',
       background: 'BAMS, MD in Ayurveda, 15+ years experience',
-      image: 'https://images.pexels.com/photos/5327921/pexels-photo-5327921.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop',
+      image: 'review2.jpg',
       story: 'Dr. Patel bridges ancient Ayurvedic wisdom with modern medical practices, ensuring our formulations are both traditional and scientifically sound.'
     },
     {
       name: 'Meera Reddy',
       role: 'Head of Community',
       background: 'Psychology background, community building expert',
-      image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop',
+      image: 'review3.jpg',
       story: 'Meera creates safe spaces for women to share their journeys, ensuring every voice is heard and supported in our community.'
     },
     {
       name: 'Dr. Kavya Singh',
       role: 'Head of Research',
       background: 'PhD in Reproductive Biology, Clinical Research',
-      image: 'https://images.pexels.com/photos/5327656/pexels-photo-5327656.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop',
+      image: 'review4.jpg',
       story: 'Dr. Singh leads our research initiatives, ensuring every product is backed by solid scientific evidence and clinical validation.'
     }
   ];
@@ -123,7 +123,7 @@ const About = () => {
             </div>
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/3768911/pexels-photo-3768911.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+                src="story.jpg"
                 alt="Women supporting each other"
                 className="rounded-2xl shadow-2xl"
               />
