@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ShoppingBag, User, Search } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Menu, X, ShoppingBag, User, Search, LogOut } from 'lucide-react';
+import { useAuth } from '../contexts/AuthContext';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [userMenuOpen, setUserMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+  const { currentUser, logout } = useAuth();
 
   const navigation = [
     { name: 'Assessment', href: '/assessment' },
@@ -12,8 +16,18 @@ const Header = () => {
     { name: 'Science', href: '/science' },
     { name: 'Community', href: '/community' },
     { name: 'Consultations', href: '/consultations' },
+    { name: 'Blog', href: '/blog' },
     { name: 'About', href: '/about' },
   ];
+
+  const handleLogout = async () => {
+    try {
+      await logout();
+      navigate('/');
+    } catch (error) {
+      console.error('Failed to log out');
+    }
+  };
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -53,9 +67,56 @@ const Header = () => {
             <button className="p-2 text-gray-600 hover:text-purple-600 transition-colors">
               <Search className="w-5 h-5" />
             </button>
-            <button className="p-2 text-gray-600 hover:text-purple-600 transition-colors">
-              <User className="w-5 h-5" />
-            </button>
+            
+            {currentUser ? (
+              <div className="relative">
+                <button 
+                  onClick={() => setUserMenuOpen(!userMenuOpen)}
+                  className="p-2 text-gray-600 hover:text-purple-600 transition-colors flex items-center space-x-2"
+                >
+                  <User className="w-5 h-5" />
+                  <span className="text-sm">{currentUser.email}</span>
+                </button>
+                
+                {userMenuOpen && (
+                  <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50">
+                    <Link
+                      to="/create-blog"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      onClick={() => setUserMenuOpen(false)}
+                    >
+                      Create Blog
+                    </Link>
+                    <button
+                      onClick={() => {
+                        handleLogout();
+                        setUserMenuOpen(false);
+                      }}
+                      className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    >
+                      <LogOut className="w-4 h-4 inline mr-2" />
+                      Logout
+                    </button>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div className="flex items-center space-x-2">
+                <Link
+                  to="/login"
+                  className="text-gray-600 hover:text-purple-600 transition-colors px-3 py-2 text-sm font-medium"
+                >
+                  Login
+                </Link>
+                <Link
+                  to="/signup"
+                  className="bg-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-purple-700 transition-colors"
+                >
+                  Register
+                </Link>
+              </div>
+            )}
+            
             <button className="p-2 text-gray-600 hover:text-purple-600 transition-colors relative">
               <ShoppingBag className="w-5 h-5" />
               <span className="absolute -top-1 -right-1 bg-purple-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
