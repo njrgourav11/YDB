@@ -25,7 +25,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [loading, setLoading] = useState(true);
 
   const signup = (email: string, password: string) => {
-    return createUserWithEmailAndPassword(auth, email, password).then(() => {});
+    // Signups are disabled - only existing users can login
+    return Promise.reject(new Error('Account registration is currently disabled. Please contact an administrator.'));
   };
 
   const login = (email: string, password: string) => {

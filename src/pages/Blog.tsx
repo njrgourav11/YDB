@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
+import { BlogSkeleton } from '../components/Skeleton';
 import {
   Calendar,
   User,
@@ -364,18 +365,7 @@ const Blog = () => {
             {loading ? (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {[...Array(4)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="bg-white rounded-2xl shadow-sm ring-1 ring-gray-100 overflow-hidden animate-pulse"
-                  >
-                    <div className="h-48 bg-gray-200" />
-                    <div className="p-6 space-y-3">
-                      <div className="h-5 bg-gray-200 rounded w-2/3" />
-                      <div className="h-4 bg-gray-200 rounded w-full" />
-                      <div className="h-4 bg-gray-200 rounded w-5/6" />
-                      <div className="h-4 bg-gray-200 rounded w-1/2" />
-                    </div>
-                  </div>
+                  <BlogSkeleton key={i} />
                 ))}
               </div>
             ) : filteredArticles.length === 0 ? (

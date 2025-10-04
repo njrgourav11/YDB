@@ -17,6 +17,10 @@ import Support from './pages/Support';
 import Blog from './pages/Blog';
 import BlogDetail from './pages/BlogDetail';
 import CreateBlog from './pages/CreateBlog';
+import AdminDashboard from './pages/AdminDashboard';
+import ResearchPapers from './pages/ResearchPapers';
+import AdminRoute from './components/AdminRoute';
+import NotFound from './pages/NotFound';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import { ToastProvider } from './components/Toast';
@@ -52,6 +56,16 @@ function App() {
                   </ProtectedRoute>
                 } 
               />
+              <Route 
+                path="/admin" 
+                element={
+                  <AdminRoute>
+                    <AdminDashboard />
+                  </AdminRoute>
+                } 
+              />
+              <Route path="/research-papers" element={<ResearchPapers />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
           <Footer />

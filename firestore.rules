@@ -1,0 +1,35 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Blog posts
+    match /blogs/{document} {
+      allow read: if true;
+      allow create, update, delete: if request.auth != null;
+    }
+    
+    // Research papers
+    match /research-papers/{document} {
+      allow read: if true;
+      allow create, update, delete: if request.auth != null;
+    }
+    
+    // Research areas
+    match /research-areas/{document} {
+      allow read: if true;
+      allow create, update, delete: if request.auth != null;
+    }
+    
+    // Team members
+    match /team-members/{document} {
+      allow read: if true;
+      allow create, update, delete: if request.auth != null;
+    }
+    
+    // Newsletter subscriptions
+    match /newsletter/{document} {
+      allow read: if true;
+      allow create: if true;
+    }
+  }
+}
